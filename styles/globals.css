@@ -122,4 +122,26 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  @media (hover: none) and (pointer: coarse) {
+    button,
+    [role="button"],
+    a,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"] {
+      touch-action: manipulation;
+      transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+      will-change: transform;
+    }
+
+    button:active,
+    [role="button"]:active,
+    a:active,
+    input[type="button"]:active,
+    input[type="submit"]:active,
+    input[type="reset"]:active {
+      transform: translateY(2px) scale(0.99);
+    }
+  }
 }

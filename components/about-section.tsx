@@ -69,8 +69,12 @@ export function AboutSection() {
 
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <button type="button" className="text-sm font-semibold text-primary hover:text-primary/80 transition">
-                  Leer más sobre el artista {'>'}{'>'}{'>'}
+                <button
+                  type="button"
+                  className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary shadow-sm transition hover:bg-primary/20 hover:text-primary-foreground hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 cursor-pointer"
+                >
+                  Leer más sobre el artista
+                  <span aria-hidden="true">→</span>
                 </button>
               </AlertDialogTrigger>
               <AlertDialogContent className="!max-w-2xl !max-h-[75vh] overflow-y-auto">
