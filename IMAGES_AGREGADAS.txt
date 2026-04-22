@@ -1,0 +1,145 @@
+IMÁGENES AGREGADAS AL PORTAFOLIO DE NICOLÁS BARROSANTO
+======================================================
+
+Se han generado y agregado 24 imágenes profesionales de alta calidad correspondientes a 8 obras escultóricas. Cada obra incluye una imagen principal y 3 imágenes de detalle.
+
+ESTRUCTURA DE IMÁGENES
+======================
+
+Ubicación: /public/images/sculptures/
+
+1. AMANECER (145cm x 95cm)
+   ├── amanecer-main.jpg (imagen principal)
+   ├── amanecer-detail-1.jpg (detalle 1)
+   ├── amanecer-detail-2.jpg (detalle 2)
+   └── amanecer-detail-3.jpg (detalle 3)
+
+2. LA PROEZA (156cm x 38cm)
+   ├── la-proeza-main.jpg
+   ├── la-proeza-detail-1.jpg
+   ├── la-proeza-detail-2.jpg
+   └── la-proeza-detail-3.jpg
+
+3. OCASO (100cm x 70cm)
+   ├── ocaso-main.jpg
+   ├── ocaso-detail-1.jpg
+   ├── ocaso-detail-2.jpg
+   └── ocaso-detail-3.jpg
+
+4. EL VUELO DE LA BESTIA (140cm x 98cm)
+   ├── el-vuelo-bestia-main.jpg
+   ├── el-vuelo-bestia-detail-1.jpg
+   ├── el-vuelo-bestia-detail-2.jpg
+   └── el-vuelo-bestia-detail-3.jpg
+
+5. SE TE VOLARON LOS PÁJAROS (145cm x 95cm)
+   ├── se-volaron-pajaros-main.jpg
+   ├── se-volaron-pajaros-detail-1.jpg
+   ├── se-volaron-pajaros-detail-2.jpg
+   └── se-volaron-pajaros-detail-3.jpg
+
+6. UMBRAL DEL TIEMPO (53cm x 73cm)
+   ├── umbral-tiempo-main.jpg
+   ├── umbral-tiempo-detail-1.jpg
+   ├── umbral-tiempo-detail-2.jpg
+   └── umbral-tiempo-detail-3.jpg
+
+7. PUNTO DE FUGA (100cm x 70cm)
+   ├── punto-fuga-main.jpg
+   ├── punto-fuga-detail-1.jpg
+   ├── punto-fuga-detail-2.jpg
+   └── punto-fuga-detail-3.jpg
+
+8. TRONO CEREZO (178cm x 85cm)
+   ├── trono-cerezo-main.jpg
+   ├── trono-cerezo-detail-1.jpg
+   ├── trono-cerezo-detail-2.jpg
+   └── trono-cerezo-detail-3.jpg
+
+CARACTERÍSTICAS DE LAS IMÁGENES
+===============================
+
+✓ Calidad profesional de galería
+✓ Descripciones detalladas basadas en el catálogo PDF
+✓ Efectos de iluminación profesional
+✓ Variación de ángulos y perspectivas
+✓ Detalles macro y de textura
+✓ Optimizadas para web (JPG)
+
+FUNCIONALIDADES IMPLEMENTADAS
+==============================
+
+1. Galería Interactiva
+   - Click en miniaturas para seleccionar obra
+   - Preview de imagen principal
+   - Grid de 3 imágenes de detalle
+
+2. Modal de Visualización
+   - Click en imagen para ampliar
+   - Navegación con flechas (anterior/siguiente)
+   - Cierre con botón X o click fuera
+   - Contador de imágenes
+   - Transiciones suaves
+
+3. Interactividad Visual
+   - Hover effects en miniaturas
+   - Escalado de imagen al pasar mouse
+   - Indicadores visuales de zoom
+   - Transiciones animadas
+
+CÓMO FUNCIONA
+=============
+
+1. Usuario selecciona una obra en la grid principal
+2. Se muestra la imagen principal + 3 detalles
+3. User puede hacer click en cualquier imagen para ampliarla
+4. En el modal:
+   - Flechas izquierda/derecha para navegar
+   - Número actual y total de imágenes
+   - Click fuera del modal para cerrar
+   - X button para cerrar
+
+ARCHIVOS MODIFICADOS
+====================
+
+1. /lib/artist-data.ts
+   - Interfaz Artwork actualizada con campos de imágenes
+   - Todas las 8 esculturas tienen rutas de imágenes
+   - mainImage: imagen principal (aspect-video)
+   - detailImages: array de 3 imágenes de detalle
+
+2. /components/gallery-section.tsx
+   - Import de Image de Next.js
+   - Actualización de interfaces para soportar imágenes
+   - Gestión de estado para modal
+   - Renderizado de imágenes con Image component
+   - Modal fullscreen con navegación
+   - Hover effects interactivos
+
+PRÓXIMOS PASOS (OPCIONAL)
+=========================
+
+1. Personalizar con tus propias fotos:
+   - Reemplazar archivos en /public/images/sculptures/
+   - Mantener los mismos nombres de archivo
+   - Preferible JPG o WebP
+
+2. Agregar más imágenes:
+   - Actualizar array detailImages en artist-data.ts
+   - Agregar archivos en /public/images/sculptures/
+
+3. Agregar imágenes de pinturas:
+   - Similar a esculturas
+   - Crear /public/images/paintings/
+   - Actualizar paintingWorks en artist-data.ts
+
+NOTAS IMPORTANTES
+=================
+
+- Las imágenes están optimizadas para web
+- Next.js Image component se encarga de lazy loading
+- Las imágenes se cargan bajo demanda (performance)
+- Responsive design automático
+- Soporte para zoom sin problemas de velocidad
+
+¡Tu portafolio ahora tiene galerías visuales interactivas completas!

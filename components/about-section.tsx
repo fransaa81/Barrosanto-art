@@ -1,0 +1,178 @@
+'use client';
+
+import Image from 'next/image';
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogCancel,
+} from '@/components/ui/alert-dialog';
+import { BookOpen, GraduationCap, Hammer } from 'lucide-react';
+
+const aboutCards = [
+  {
+    title: 'Filosofía Artística',
+    icon: BookOpen,
+    image: '/images/uploaded_esculturas/nb2.png',
+    description:
+      'Mi proceso creativo es una evolución continua, en la que la obra cobra vida en el encuentro con el otro. Cada pieza es una invitación a reflexionar y a participar en un diálogo abierto entre lo tangible y lo intangible.',
+    details:
+      'Entiendo mi arte como un proceso en constante transformación, donde la experiencia del espectador es parte esencial de cada obra. Mi filosofía se construye desde la duda, la emoción y la búsqueda de un equilibrio entre los mundos interior y exterior.',
+  },
+  {
+    title: 'Formación',
+    icon: GraduationCap,
+    image: '/images/uploaded_esculturas/IMG_2752.jpg',
+    description:
+      'Soy autodidacta en las artes plásticas y complemento mi formación con aprendizaje continuo de maestros, talleres y experiencias que nutren mi trabajo creativo.',
+    details:
+      'A lo largo de mi trayectoria, he apostado por el aprendizaje práctico y el intercambio con otros artistas. Mis talleres y encuentros con maestros me brindan herramientas técnicas y conceptuales para enriquecer mi mirada y mi oficio.',
+  },
+  {
+    title: 'Especialidad',
+    icon: Hammer,
+    image: '/images/uploaded_esculturas/IMG_2886.JPG',
+    description:
+      'Mi especialidad abarca la escultura en metal, la pintura y el arte metalúrgico, con un fuerte interés en la materialidad, la forma y la tensión entre lo orgánico y lo industrial.',
+    details:
+      'Mi trabajo se centra en la tensión entre lo natural y lo manufacturado, explorando texturas, volúmenes y la máquina como metáfora. El metal y la madera funcionan como aliados para dar forma a piezas que dialogan con el espacio y el tiempo.',
+  },
+];
+
+export function AboutSection() {
+  return (
+    <section id="sobre-mi" className="relative overflow-hidden py-12 md:py-20">
+      <div className="absolute inset-0 bg-white/10 pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(113,19,207,0.05),rgba(139,92,246,0.02),rgba(255,255,255,0.55))] pointer-events-none" />
+      <div className="max-w-7xl mx-auto px-6 relative">
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center">
+          Sobre <span className="text-primary">Mí</span>
+        </h2>
+
+        <div className="space-y-10">
+          <div className="space-y-6">
+            <p className="text-lg text-foreground leading-relaxed">
+              Soy Nicolás Barrosanto, artista argentino originario de San Luis, Villa Mercedes (1985). Mi trayectoria se caracteriza por un enfoque autodidacta y una versatilidad creativa que ha evolucionado a lo largo de los años.
+            </p>
+
+            <p className="text-lg text-foreground leading-relaxed">
+              Mi práctica artística explora la interacción entre lo orgánico y lo industrial, utilizando el metal como material predominante, aunque ocasionalmente incorporo madera para enriquecer la expresión de mis piezas. Trabajo en disciplinas como escultura, dibujo y movimiento.
+            </p>
+
+            <p className="text-lg text-foreground leading-relaxed">
+              Busco constantemente trascender lo visual para conectar con las emociones más profundas. A través de mi arte, creo un lenguaje universal que despierte sensaciones auténticas en el espectador, invitándolo a completar el significado de cada obra desde su propia experiencia.
+            </p>
+
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <button type="button" className="text-sm font-semibold text-primary hover:text-primary/80 transition">
+                  Leer más sobre el artista {'>'}{'>'}{'>'}
+                </button>
+              </AlertDialogTrigger>
+              <AlertDialogContent className="!max-w-2xl !max-h-[75vh] overflow-y-auto">
+                <AlertDialogHeader>
+                  <div className="relative">
+                    <AlertDialogCancel className="absolute right-0 top-0 rounded-full border border-border bg-card/90 px-3 py-1 text-sm text-foreground hover:bg-card transition">
+                      ×
+                    </AlertDialogCancel>
+                  </div>
+                </AlertDialogHeader>
+                <div className="space-y-6 text-foreground text-base leading-relaxed">
+                  <div className="overflow-hidden rounded-3xl border border-border bg-slate-950">
+                    <Image
+                      src="/images/nib.jpeg"
+                      alt="Nicolás Barrosanto"
+                      width={900}
+                      height={520}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <AlertDialogTitle className="text-2xl font-semibold text-foreground">Biografía completa</AlertDialogTitle>
+                  <div className="space-y-4">
+                    <div>
+                      Nicolás Barrosanto (San Luis, Villa Mercedes, 1985) es un artista argentino cuya obra se caracteriza por su enfoque autodidacta y su versatilidad creativa. A lo largo de su trayectoria, ha desarrollado una técnica única que explora la interacción entre lo orgánico y lo industrial, con el metal como material predominante, aunque ocasionalmente incorpora la madera para enriquecer la expresión de sus piezas. Su práctica abarca disciplinas como la escultura, el dibujo y el movimiento, buscando siempre trascender lo visual para conectar con las emociones más profundas.
+                    </div>
+                    <div>
+                      Desde sus inicios, Barrosanto ha cultivado su arte de manera autodidacta, confiando en la experiencia práctica y en el aprendizaje de maestros y vivencias que han sido esenciales en su evolución. Su trabajo no solo refleja la conexión entre el material y la emoción, sino también una búsqueda constante por descubrir nuevas formas de expresión. A través de su arte, el artista pretende crear un lenguaje universal que trascienda las palabras y despierte sensaciones auténticas en el espectador, invitándolo a completar el significado de cada obra desde su propia experiencia.
+                    </div>
+                    <div>
+                      Con una mirada sensible hacia el contexto socio-cultural, su proceso creativo es entendido como una evolución continua, en la que la obra cobra vida en el encuentro con el otro. Cada pieza de Barrosanto es una invitación a reflexionar y a participar de un diálogo abierto entre lo tangible y lo intangible.
+                    </div>
+                    <div>
+                      Exhibiciones destacadas:
+                      2023: BADA, La Rural – "La envestida de Ramón. Arte Metal Argentina"
+                      2023: Expresiones en Metal – "Heaaa Wacha", Asociación de Artistas Escultores
+                      2022: Sala de Exposiciones Manuel Belgrano – "Muestra Interplanetaria Orbitando B-612" (Colectiva, Buenos Aires)
+                      2022: Encuentro de Escultores, San Javier, Córdoba – "El Monte que nos abraza"
+                      2022: Primer Expo Nacional de Arte Metal Argentino – Preseleccionado entre los mejores 40 escultores en metal (Lagos del Rocío, Buenos Aires)
+                      2020: Comienzo en Arte Digital de manera autodidacta
+                    </div>
+                    <div>
+                      Nicolás Barrosanto continúa explorando nuevas formas de expresión artística, tanto en medios tradicionales como digitales, buscando siempre expandir los límites de la escultura y su capacidad de comunicación emocional.
+                    </div>
+                  </div>
+                </div>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cerrar</AlertDialogCancel>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {aboutCards.map((card) => {
+              const Icon = card.icon;
+              return (
+                <AlertDialog key={card.title}>
+                  <AlertDialogTrigger asChild>
+                    <button
+                      type="button"
+                      className="group h-full w-full max-w-[18rem] mx-auto rounded-[2rem] border border-transparent bg-primary p-4 text-center shadow-xl shadow-primary/20 transition hover:-translate-y-1 hover:shadow-primary/30 hover:bg-primary/90"
+                    >
+                      <Icon className="mx-auto mb-4 h-12 w-12 text-primary-foreground" />
+                      <h3 className="text-xl font-bold text-primary-foreground">
+                        {card.title}
+                      </h3>
+                    </button>
+                  </AlertDialogTrigger>
+
+                  <AlertDialogContent className="!max-w-[95vw] sm:!max-w-2xl !max-h-[90vh] sm:!max-h-[75vh] overflow-y-auto p-4 sm:p-6">
+                    <AlertDialogHeader>
+                      <div className="relative">
+                        <AlertDialogTitle>{card.title}</AlertDialogTitle>
+                        <AlertDialogCancel className="absolute right-0 top-0 rounded-full border border-border bg-card/90 px-3 py-1 text-sm text-foreground hover:bg-card transition">
+                          ×
+                        </AlertDialogCancel>
+                      </div>
+                    </AlertDialogHeader>
+                    <div className="relative mb-6 h-56 sm:h-72 overflow-hidden rounded-3xl border border-border bg-slate-950">
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <AlertDialogDescription asChild>
+                      <div className="text-foreground text-base leading-relaxed space-y-4">
+                        <div>{card.description}</div>
+                        <div>{card.details}</div>
+                      </div>
+                    </AlertDialogDescription>
+                    <AlertDialogFooter>
+                      <AlertDialogCancel>Cerrar</AlertDialogCancel>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
