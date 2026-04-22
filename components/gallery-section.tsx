@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 interface GalleryItem {
@@ -49,6 +49,14 @@ export function GallerySection({ id, title, subtitle, items, color = 'primary' }
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   const selectedWork = items.find(item => item.id === selectedItem);
+  const selectedWorkRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (selectedWorkRef.current) {
+      selectedWorkRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [selectedItem]);
+
   const accentClass = color === 'primary' ? 'text-primary' : 'text-accent';
   const sectionBackground = id === 'esculturas'
     ? 'bg-[url(/images/uploaded_esculturas/IMG_2856.JPG)] bg-cover bg-center'
@@ -126,7 +134,10 @@ export function GallerySection({ id, title, subtitle, items, color = 'primary' }
         </div>
 
         {selectedWork && (
-          <div className="mt-12 rounded-[2rem] border border-border bg-card/95 backdrop-blur-xl shadow-2xl shadow-primary/10 p-6 md:p-12">
+          <div
+            ref={selectedWorkRef}
+            className="mt-12 rounded-[2rem] border border-border bg-card/95 backdrop-blur-xl shadow-2xl shadow-primary/10 p-6 md:p-12"
+          >
             <div className="grid md:grid-cols-3 gap-8">
               <div className="md:col-span-2">
                 {selectedWork.mainImage && (
