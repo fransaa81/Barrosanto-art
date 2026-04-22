@@ -15,7 +15,7 @@ export function HeroSection() {
       
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid gap-8 items-center">
-          <div className="space-y-8 relative z-10 -mt-16">
+          <div className="space-y-8 relative z-10 mt-12 md:-mt-16">
             <div>
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 leading-tight tracking-[-0.04em] drop-shadow-[0_24px_24px_rgba(0,0,0,0.55)]">
                 NICOLAS
