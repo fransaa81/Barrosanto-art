@@ -18,7 +18,7 @@ export function Header() {
             </svg>
             Esculturas
           </a>
-          <a href="#pinturas" className="inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-lg font-semibold uppercase text-white hover:text-primary transition-all">
+          <a href="#obra-pictorica" className="inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-lg font-semibold uppercase text-white hover:text-primary transition-all">
             <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
               <path d="M7 21l3-3 6-6 2-2a2.5 2.5 0 0 0-3.5-3.5l-2 2-6 6-3 3v3h3z" />
               <path d="M14 9l5-5" />
@@ -64,7 +64,7 @@ export function Header() {
               </svg>
               Esculturas
             </a>
-            <a href="#pinturas" className="flex items-center justify-center gap-2 rounded-full px-4 py-2 text-base font-semibold uppercase text-white hover:text-primary transition-all">
+            <a href="#obra-pictorica" className="flex items-center justify-center gap-2 rounded-full px-4 py-2 text-base font-semibold uppercase text-white hover:text-primary transition-all">
               <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 21l3-3 6-6 2-2a2.5 2.5 0 0 0-3.5-3.5l-2 2-6 6-3 3v3h3z" />
                 <path d="M14 9l5-5" />

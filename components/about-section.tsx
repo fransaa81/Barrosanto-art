@@ -26,7 +26,7 @@ const aboutCards = [
   {
     title: 'Formación',
     icon: GraduationCap,
-    image: '/images/uploaded_esculturas/IMG_2752.jpg',
+    image: '/images/especialidadNB.png',
     description:
       'Soy autodidacta en las artes plásticas y complemento mi formación con aprendizaje continuo de maestros, talleres y experiencias que nutren mi trabajo creativo.',
     details:
