@@ -3,9 +3,13 @@
 export function Footer() {
   return (
     <footer className="bg-gradient-to-b from-slate-800 via-slate-900 to-slate-800 py-6 text-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm font-medium">
-          <span className="uppercase tracking-[0.18em]">Nicolás Barrosanto</span>
+          <img
+            src="/images/firma%20barrosanto.png"
+            alt="Firma Barrosanto"
+            className="h-10 w-auto object-contain"
+          />
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
             <a href="mailto:nicobarrosanto@gmail.com" className="flex items-center gap-2 hover:text-white/80 transition-colors">
@@ -33,7 +37,7 @@ export function Footer() {
         </div>
 
         <div className="mt-6 border-t border-white/10 pt-4 text-center text-white/70 text-xs">
-          <p>&copy; 2026 Nicolás Barrosanto. Todos los derechos reservados.</p>
+          <p>&copy; 2026. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
