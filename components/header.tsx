@@ -16,7 +16,7 @@ export function Header() {
           />
         </div>
 
-        <div className="hidden md:flex w-full items-center justify-center gap-4">
+        <div className="hidden md:flex w-full items-center justify-end gap-10 pr-20">
           <a href="#esculturas" className="inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-lg font-semibold uppercase text-white hover:text-primary transition-all">
             <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
               <path d="M12 4c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
