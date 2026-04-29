@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { BiographyDialog } from '@/components/biography-dialog';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -9,11 +10,15 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-gradient-to-b from-slate-800 via-slate-900 to-slate-800 border-b border-border shadow-[0_20px_70px_rgba(0,0,0,0.16)] backdrop-blur-sm">
       <nav className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <img
-            src="/images/firma%20barrosanto.png"
-            alt="Firma Barrosanto"
-            className="h-20 w-auto object-contain"
-          />
+          <BiographyDialog>
+            <button type="button" className="p-0 bg-transparent border-0 cursor-pointer focus-visible:outline-none">
+              <img
+                src="/images/firma%20barrosanto.png"
+                alt="Firma Barrosanto"
+                className="h-14 md:h-20 w-auto object-contain"
+              />
+            </button>
+          </BiographyDialog>
         </div>
 
         <div className="hidden md:flex w-full items-center justify-end gap-10 pr-20">
